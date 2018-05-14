@@ -1,0 +1,40 @@
+
+<section class="perfil">
+  <div class="centro">
+  <h1>Bienvenido {{miperfil.first}}</h1>
+  <button v-on:click="clickDeLogOut"> Log Out </button>
+
+<br>
+<br>
+<div class="caja">
+  
+    <a  class="separacionletras"  >
+    Email: {{miperfil.email}}
+  </a>
+  <br>
+  <a  class="separacionletras"  >
+    Fecha primera regla: {{miperfil.date}}
+  </a>
+  <br>
+    <a  class="separacionletras"  >
+    Edad: {{miperfil.age}}
+  </a>
+  <br>
+    <a  class="separacionletras"  >
+    Atura: {{miperfil.height}}
+  </a>
+  <br>
+    <a  class="separacionletras"  >
+    Peso: {{miperfil.weight}}
+  </a>
+</div>
+<br>
+<div class="card" v-for="per in perfiles">
+
+  <a>
+    Nombre: {{per.first}}
+    Email: {{per.email}}
+  </a>
+</div>
+</div>
+</section>

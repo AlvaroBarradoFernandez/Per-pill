@@ -1,0 +1,109 @@
+<html>
+<body class="fondo">
+<section class="login-registro">
+  <div class="plogin" v-show="blLoginVisible">
+    <br>
+    <!-- <h1>{{sTitulo}}</h1> -->
+    <img src="https://firebasestorage.googleapis.com/v0/b/proyecto-de-barri-1.appspot.com/o/AplicacionImg%2FLogoo.png?alt=media&token=c53d57e2-464b-4df8-b558-a38679a52d4a" class="imagenlogo">
+    <table class="login">
+    <tr>
+    <td>
+    <p class="datoV">E-mail</p>
+    </td>
+    <td>
+    <input type="text" placeholder="Introduzca su email" v-model="slEmail" class="datoI">
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p class="datoV">Contraseña</p>
+    </td>
+    <td>
+    <input type="password" placeholder="Introduzca su contraseña" v-model="slPass" class="datoI">
+    </td>
+    </tr>
+    </table>
+    <br>
+
+    <button v-on:click="clickDeBotonAceptarLog"> Logearse</button>
+    <button v-on:click="clickDeBotonRegistrarse"> Registrarse</button>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2000px-Google_%22G%22_Logo.svg.png" v-on:click="clickDeBotonGoogle"></img>
+
+    </div>
+
+    <div class="pregistro" v-show="!blLoginVisible">
+    <h1>Panel Registro</h1>
+    <table class="registro">
+    <tr>
+    <td>
+    <p class="datoV">Nombre</p>
+    </td>
+    <td>
+    <input type="text" placeholder="Introduzca su nombre" v-model="srFirst" class="datoI">
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p class="datoV">Contraseña</p>
+    </td>
+    <td>
+    <input type="password" placeholder="Introduzca una contraseña" v-model="srPass" class="datoI">
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p class="datoV">Repetir contraseña</p>
+    </td>
+    <td>
+    <input type="password" placeholder="Repita la contraseña" class="datoI">
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p class="datoV">E-mail</p>
+    </td>
+    <td>
+    <input type="text" placeholder="Introduzca su email" v-model="srEmail" class="datoI">
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p class="datoV">Edad</p>
+    </td>
+    <td>
+    <input type="number" placeholder="Introduzca su edad" v-model="srAge" class="datoI">
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p class="datoV">Peso</p>
+    </td>
+    <td>
+    <input type="number" placeholder="Introduzca su peso" v-model="srWeight">
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p class="datoV">Altura</p>
+    </td>
+    <td>
+    <input type="number" placeholder="Introduzca su altura" v-model="srHeight">
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p class="datoV">Fecha primera regla</p>
+    </td>
+    <td>
+    <input type="date" v-model="srDate">
+    </td>
+    </tr>
+    </table>
+
+    <button v-on:click="clickDeBotonAceptarReg"> Aceptar</button>
+
+    <button v-on:click="clickDeBotonCancelar"> Cancelar</button>
+    </div>
+</section>
+</body>
+</html>
